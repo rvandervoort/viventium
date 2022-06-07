@@ -1,0 +1,72 @@
+{
+  "name": "viventium",
+  "version": "1.0.0",
+  "description": "viventium front-end challange",
+  "main": "index.js",
+  "scripts": {
+    "ng": "./node_modules/.bin/ng",
+    "server": "json-server --watch ./api/database.json",
+    "start": "./node_modules/.bin/ng serve",
+    "build": "./node_modules/.bin/ng build",
+    "watch": "./node_modules/.bin/ng build --watch --configuration development",
+    "test": "./node_modules/.bin/ng test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvandervoort/viventium.git"
+  },
+  "author": "Reinder van der Voort",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvandervoort/viventium/issues"
+  },
+  "homepage": "https://github.com/rvandervoort/viventium#readme",
+  "dependencies": {
+    "@angular/animations": "^14.0.0",
+    "@angular/cdk": "^14.0.0",
+    "@angular/cli": "^14.0.0",
+    "@angular/common": "^14.0.0",
+    "@angular/compiler": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "^14.0.0",
+    "@angular/material": "^14.0.0",
+    "@angular/platform-browser": "^14.0.0",
+    "@angular/platform-browser-dynamic": "^14.0.0",
+    "@angular/router": "^14.0.0",
+    "json-server": "^0.17.0",
+    "rxjs": "~7.5.0",
+    "sanitize-html": "^2.7.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.0.0",
+    "@angular/cli": "~14.0.0",
+    "@angular/compiler-cli": "^14.0.0",
+    "@types/jasmine": "~4.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-angular": "^4.0.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-no-unsanitized": "^3.1.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "jasmine-core": "~4.1.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "prettier": "^2.3.1",
+    "typescript": "~4.7.2"
+  }
+}
