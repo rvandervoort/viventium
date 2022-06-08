@@ -1,4 +1,4 @@
-<div>
+<div class="tag-list-container">
 <span class="all-tag-container" > Filter:
     <button 
     class="tag-wrapper" 
@@ -10,5 +10,12 @@
 </span>
 </div>
 <ng-container *ngFor="let post of filteredPosts">
-    <app-post [ngValue]="post"></app-post>
+    <app-post [ngValue]="post" [allTags]="allTags" (ngValueChange)="updatePost($event)" (ngOnDelete)="deletePost($event)"></app-post>
 </ng-container>
+
+<br>
+<br>
+<h2>New Post</h2>
+<div class="post-container">
+    <app-edit-post [allTags]="allTags" (ngValueChange)="onNewPost($event)"></app-edit-post>    
+</div>

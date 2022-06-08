@@ -6,35 +6,11 @@
     margin: 20px;
     width: calc( 100% - 80px );
 
-    .header {
-        width: 100%;
-
-        .post-title {
-            color: darkgray;
-        }
-    
-        .edit-button {
-            float:right;
-        }
+    .edit-button {
+        float:right;
     }
-
-    .post-tag-container {
-        width: 100%;
-        text-overflow: ellipsis;
-
-        .post-tag {
-            background-color: darkblue;
-            color:white;
-            border-radius: 4px;
-            margin: 0 3px 3px 0;
-            padding: 0 6px;
-        }
+    .delete-button {
+        float:right;
+        color:red;
     }
-}
-
-.post-text {
-    width: calc( 100% - 20px );
-    max-height: 100px;
-    margin: 10px 0;
-    padding: 10px;
 }

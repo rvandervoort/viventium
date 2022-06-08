@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SafeHtmlComponent } from './safe-html.component';
+import SafeHtmlComponent from './safe-html.component';
 
 describe('SafeHtmlComponent', () => {
   let component: SafeHtmlComponent;

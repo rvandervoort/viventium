@@ -16,7 +16,7 @@ export default class EditPostComponent {
 
   @Output() ngValueChange = new EventEmitter<IPost | null>(); // null would indicate no changes
 
-  @Input() allTags: string[] = [];
+  @Input() allTags: Set<string> = new Set<string>();
 
   onToggleTag(event: Event): void {
     if (!event.target) {
@@ -25,7 +25,7 @@ export default class EditPostComponent {
 
     const target = event.target as unknown as HTMLInputElement;
 
-    this.post.addOrRemoveTag(target.id, target.value ? "add" : "remove");
+    this.post.addOrRemoveTag(target.id, target.checked ? "add" : "remove");
   }
 
   onNewTag(event: Event): void {
@@ -37,8 +37,8 @@ export default class EditPostComponent {
 
     if (target.value && target.value.length > 0) {
       // make add it to allTags, if it doesnt exist yet
-      if (!this.allTags.some((item: string) => item === target.value)) {
-        this.allTags.push(target.value);
+      if (!this.allTags.has(target.value)) {
+        this.allTags.add(target.value);
       }
 
       // add it to post.tags, if it isnt included yet
@@ -46,5 +46,33 @@ export default class EditPostComponent {
         this.post.addOrRemoveTag(target.value, "add");
       }
     }
+  }
+
+  onTitleInput(event: Event){
+    if (!event.target) {
+      return;
+    }
+
+    const target = event.target as unknown as HTMLInputElement;
+
+    this.post.title = target.value
+  }
+
+  onTextInput(event: Event){
+    if (!event.target) {
+      return;
+    }
+
+    const target = event.target as unknown as HTMLInputElement;
+
+    this.post.text = target.value
+  }
+
+  onSave(){
+    this.ngValueChange.emit(this.post);
+  }
+
+  onCancel(){
+    this.ngValueChange.emit(null);
   }
 }

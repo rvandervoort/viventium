@@ -1,6 +1,10 @@
+.tag-list-container {
+    margin-top: 20px;
+}
+
 .all-tag-container {    
-    padding: 0 20px;
-    margin: 0;
+    
+    margin: 20px;
     width: calc( 100% - 80px );
     text-overflow: ellipsis;
 
@@ -16,4 +20,17 @@
 
         }
     }
+}
+.post-container {
+    border-width: 1px;
+    border-color:grey;
+    background-color:lightblue;
+    box-shadow: 2px 5px 8px 10px lightgrey;
+    padding: 20px;
+    margin: 20px;
+    width: calc( 100% - 80px );
+}
+
+h2 {
+    margin-left:20px;
 }

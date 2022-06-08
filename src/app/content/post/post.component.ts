@@ -14,14 +14,18 @@ export default class PostComponent {
 
   @Output() ngValueChange = new EventEmitter<IPost>();
 
+  @Output() ngOnDelete = new EventEmitter<string>();
+
+  @Input() allTags: Set<string> = new Set<string>();
+
   editMode = false;
 
   constructor(private postService: PostService) {}
 
-  onPostEdited(event: IPost | null): void {
-    if (event !== null && event.id) {
+  onPostEdited(event: Event | IPost | null): void {
+    if (event !== null && (event as IPost).id) {
       this.postService
-        .patch(event.id, event)
+        .patch((event as IPost).id!, event as IPost)
         .pipe(take(1))
         .subscribe((result: IPost) => {
           this.ngValue = result;
@@ -30,5 +34,14 @@ export default class PostComponent {
     }
 
     this.editMode = false;
+  }
+
+  onDelete(): void {
+      this.postService
+        .delete(this.ngValue.id!)
+        .pipe(take(1))
+        .subscribe(() => {
+          this.ngOnDelete.emit(this.ngValue.id!);
+        });
   }
 }

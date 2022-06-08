@@ -1,0 +1,7 @@
+<span class="header">
+    <h2 class="post-title">{{ ngValue.title }}</h2>
+</span>
+<span class="post-tag-container" *ngFor="let tag of ngValue.tags">
+    <span class="post-tag">{{ tag }}</span>
+</span>
+<app-safe-html [ngValue]="ngValue.text" class="post-text"></app-safe-html>

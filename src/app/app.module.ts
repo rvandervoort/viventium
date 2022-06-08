@@ -10,8 +10,9 @@ import PostComponent from "./content/post/post.component";
 import PostService from "./services/post.service";
 import PostListComponent from "./content/post-list/post-list.component";
 import SafeHtmlComponent from "./content/safe-html/safe-html.component";
-import EditPostComponent from "./content/edit-html/edit-post.component";
+import EditPostComponent from "./content/edit-post/edit-post.component";
 import SanitizeHtmlPipe from "./pipes/sanitize-html.pipe";
+import PostViewComponent from './content/post-view/post-view.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import SanitizeHtmlPipe from "./pipes/sanitize-html.pipe";
     SafeHtmlComponent,
     EditPostComponent,
     SanitizeHtmlPipe,
+    PostViewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, MatIconModule],
   providers: [PostService],

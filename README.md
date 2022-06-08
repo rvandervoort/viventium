@@ -1,9 +1,15 @@
 # Viventium
 
+## TODO
+clean-up
+add tests
+create post module
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
 Run `npm run server` to start the mock backend server (json-server). it will host on port 3000.
+
 Run `npm run start` for a dev server running the frontend project. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding

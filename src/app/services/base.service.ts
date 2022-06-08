@@ -33,4 +33,18 @@ export default abstract class BaseService<T> {
       this.options,
     );
   }
+
+  post(model: T): Observable<T> {
+    return this.http.post<T>(
+      `${this.baseURI}/${this.subRoute}`,
+      model,
+      this.options,
+    );
+  }
+
+  delete(id: string): Observable<T> {
+    return this.http.delete<T>(
+      `${this.baseURI}/${this.subRoute}/${id}`
+    );
+  }
 }
