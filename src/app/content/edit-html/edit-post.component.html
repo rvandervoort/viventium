@@ -1,0 +1,16 @@
+<form id="post-form" action>
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" [value]="post.title" (input)="post.title = $event.target.value"/>
+    <label>Tags</label>
+    <ngContainer *ngFor="let tag of allTags">
+        <label [for]="tag">{{ tag }}</label>
+        <input type="checkbox" [id]="tag" [name]="tag" [checked]="tags.includes(tag)" (input)="onToggleTag($event)"/>
+    </ngContainer>
+    <input type="text" id="new-tag" name="new-tag" placeholder="New Tag" (input)="onNewTag($event)"/>
+</form>
+<label for="text">Text</label>
+<textarea form="post-form" contenteditable="true" id="text" name="text" [value]="text" (input)="post.text = $event.target.value"></textarea>
+<span class="form-buttons" >
+    <button id="save" name="save" form="post-form" (click)="ngValueChange.emit(post)">Save</button>
+    <button id="cancel" name="cancel" form="post-form" (click)="ngValueChange.emit(null)">Cancel</button>
+</span>

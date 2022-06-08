@@ -1,0 +1,23 @@
+<div *ngIf="ngValue" class="post-container">
+    <ngContainer *ngIf="editMode;then view-content else edit-content">
+
+    </ngContainer>
+
+    <div *ngIf="isValid;then content else other_content">here is ignored</div>
+<ng-template #view-content>
+    <span class="header">
+        <h2 class="post-title">{{ ngValue.title }}</h2>
+        <button class="edit-button" id="edit" name="edit" (click)="editMode = true">Edit</button>
+    </span>
+    <span class="post-tag-container" *ngFor="let tag of ngValue.tags">
+        <span class="post-tag">{{ tag }}</span>
+    </span>
+    <app-safe-html [ngValue]="ngValue.text" class="post-text"></app-safe-html>
+</ng-template>
+    <app-edit-post [allTags]="allTags" [ngValue]="ngValue" (ngPostChange)="onPostEdited($event)"></app-edit-post>
+<ng-template #edit-content>
+    
+</ng-template>
+
+
+</div>

@@ -1,0 +1,19 @@
+.all-tag-container {    
+    padding: 0 20px;
+    margin: 0;
+    width: calc( 100% - 80px );
+    text-overflow: ellipsis;
+
+    .tag-wrapper {
+        background-color: darkblue;
+        color:white;
+        border-radius: 4px;
+        margin: 0 3px 3px 0;
+        padding: 0 6px;
+
+        &.selected {
+            background-color: orange;
+
+        }
+    }
+}

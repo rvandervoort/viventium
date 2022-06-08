@@ -1,0 +1,14 @@
+<div>
+<span class="all-tag-container" > Filter:
+    <button 
+    class="tag-wrapper" 
+    (click)="toggleTag(tag)" 
+    [ngClass]="{selected: selectedTags.includes(tag)}" 
+    *ngFor="let tag of allTags">
+        {{ tag }}
+    </button>
+</span>
+</div>
+<ng-container *ngFor="let post of filteredPosts">
+    <app-post [ngValue]="post"></app-post>
+</ng-container>
