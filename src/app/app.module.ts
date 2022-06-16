@@ -12,7 +12,8 @@ import PostListComponent from "./content/post-list/post-list.component";
 import SafeHtmlComponent from "./content/safe-html/safe-html.component";
 import EditPostComponent from "./content/edit-post/edit-post.component";
 import SanitizeHtmlPipe from "./pipes/sanitize-html.pipe";
-import PostViewComponent from './content/post-view/post-view.component';
+import CalculatorPipe from "./pipes/calculator.pipe";
+import PostViewComponent from "./content/post-view/post-view.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import PostViewComponent from './content/post-view/post-view.component';
     SafeHtmlComponent,
     EditPostComponent,
     SanitizeHtmlPipe,
+    CalculatorPipe,
     PostViewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, MatIconModule],
